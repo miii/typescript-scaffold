@@ -1,0 +1,21 @@
+{
+  "name": "@miii/typescript-scaffold",
+  "version": "1.0.0",
+  "main": "build/index.js",
+  "author": "Jacob Andersson <jacob.m.andersson@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rimraf build/**/*",
+    "build": "npm run clean && babel src --out-dir build -x .ts",
+    "dev": "babel-node src/index.ts -x .ts",
+    "start": "node build/index.js"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/node": "^7.10.5",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-typescript": "^7.10.4",
+    "rimraf": "^3.0.2"
+  }
+}
